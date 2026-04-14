@@ -6,30 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!-- 引入 Vue 主题样式 -->
+  <!-- 引入一个好看的主题 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 </head>
 <body>
-  <!-- 
-    这里的文字只是在网页加载完成前显示的提示。
-    原来是 "加载中..."，我改成了 "Loading test.md..."，你也可以改成中文"正在加载..."。
-  -->
-  <div id="app">Loading 第一阶段学习总结.md...</div>
-
+  <div id="app">加载中...</div>
   <script>
     window.$docsify = {
-      name: '我的知识库',
-      repo: 'https://github.com/Alira-Wcy/nccl',
-
-      // 👇👇👇 关键配置：这里告诉 Docsify 去加载 test.md 作为首页
-      // '/' 代表根路径（也就是首页），后面的字符串是文件名
-      load: ['/test.md'],
-
-      // 高级技巧：如果你想让侧边栏也正常工作，可以加上这个
-      // auto2top: true // 自动滚动到顶部
+      name: '我的知识库', // 网站左上角显示的名字
+      repo: 'https://github.com/Alira-Wcy/nccl', // 右上角GitHub图标链接
+      // 自动加载 README.md 作为首页
+      loadSidebar: true,
     }
   </script>
-
   <!-- 引入 Docsify 核心脚本 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 </body>
